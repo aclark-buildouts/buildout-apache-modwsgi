@@ -45,3 +45,4 @@ configure-options = --with-apxs=${buildout:parts-directory}/apache/bin/apxs --wi
 [supervisor]
 recipe = collective.recipe.supervisor
 programs = 0 apache ${apache:location}/bin/httpd [ -c "ErrorLog /dev/stdout" -DFOREGROUND -f ${buildout:directory}/httpd.conf ]
+
