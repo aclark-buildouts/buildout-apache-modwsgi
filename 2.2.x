@@ -10,7 +10,7 @@ parts =
 
 [apache]
 recipe = hexagonit.recipe.cmmi
-url = http://apache.ziply.com//httpd/httpd-2.2.21.tar.gz
+url = http://apache.ziply.com//httpd/httpd-2.2.22.tar.gz
 configure-options = 
     --enable-mods-shared="all"
     --enable-so
@@ -25,14 +25,14 @@ configure-options =
 
 [app]
 recipe = collective.recipe.template
-url = http://pythonpackages.com/buildout/apache/conf/app.wsgi.in
+url = http://pythonpackages.com/buildout/apache-modwsgi/conf/app.wsgi.in
 output = ${buildout:directory}/app.wsgi
 hello_world = Hello World!
 
 [apache-config]
 # Requires c.r.template 1.9 or higher
 recipe = collective.recipe.template
-url = http://pythonpackages.com/buildout/apache/conf/httpd.conf.in
+url = http://pythonpackages.com/buildout/apache-modwsgi/conf/httpd.conf.in
 output = ${buildout:directory}/httpd.conf
 app = ${app:output}
 listen = 8080
