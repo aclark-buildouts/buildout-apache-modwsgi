@@ -25,14 +25,14 @@ configure-options =
 
 [app]
 recipe = collective.recipe.template
-url = http://build.pythonpackages.com/buildout/apache/app.wsgi.in
+url = http://pythonpackages.com/buildout/apache/conf/app.wsgi.in
 output = ${buildout:directory}/app.wsgi
 hello_world = Hello World!
 
 [apache-config]
 # Requires c.r.template 1.9 or higher
 recipe = collective.recipe.template
-url = http://build.pythonpackages.com/buildout/apache/httpd.conf.in
+url = http://pythonpackages.com/buildout/apache/conf/httpd.conf.in
 output = ${buildout:directory}/httpd.conf
 app = ${app:output}
 listen = 8080

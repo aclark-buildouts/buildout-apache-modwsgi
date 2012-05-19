@@ -1,0 +1,6 @@
+[buildout]
+extends = 2.2.x
+
+[versions]
+# Use travis-ci version
+distribute = 0.6.24
