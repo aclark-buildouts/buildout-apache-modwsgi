@@ -25,14 +25,14 @@ configure-options =
 
 [app]
 recipe = collective.recipe.template
-url = http://raw.github.com/pythonpackages/buildout-apache-modwsgi/conf/app.wsgi.in
+url = http://raw.github.com/pythonpackages/buildout-apache-modwsgi/master/conf/app.wsgi.in
 output = ${buildout:directory}/app.wsgi
 hello_world = Hello World!
 
 [apache-config]
 # Requires c.r.template 1.9 or higher
 recipe = collective.recipe.template
-url = http://raw.github.com/pythonpackages/buildout-apache-modwsgi/conf/httpd.conf.in
+url = http://raw.github.com/pythonpackages/buildout-apache-modwsgi/master/conf/httpd.conf.in
 output = ${buildout:directory}/httpd.conf
 app = ${app:output}
 listen = 8080
